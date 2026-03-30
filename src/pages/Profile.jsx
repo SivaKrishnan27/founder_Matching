@@ -64,37 +64,7 @@ export default function Profile() {
 
   return (
     <Shell title="My Profile" subtitle="Update your co-founder profile and needs">
-      <Toast toast={toast} />
-
-      {/* Profile header */}
-      <div style={{
-        background: 'linear-gradient(135deg,rgba(91,127,255,.09),rgba(167,139,250,.05))',
-        border: '.5px solid rgba(91,127,255,.22)', borderRadius: '14px', padding: '18px 22px',
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '16px', flexWrap: 'wrap',
-        animation: 'fadeUp .4s ease both',
-      }}>
-        <div style={{ display: 'flex', gap: '16px', alignItems: 'center', flex: 1 }}>
-          <Avatar initials={user.initials} avClass={user.avClass} size="xl" />
-          <div>
-            <div style={{ fontFamily: "'Syne',sans-serif", fontSize: '20px', fontWeight: 800, marginBottom: '3px' }}>{form.name}</div>
-            <div style={{ fontSize: '13px', color: 'var(--muted)', marginBottom: '7px' }}>{form.role} · {form.city}</div>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px' }}>
-              {form.skills.split(',').map(s => s.trim()).filter(Boolean).slice(0, 4).map(s => (
-                <Tag key={s} text={s} cls="tag-gray" />
-              ))}
-            </div>
-          </div>
-        </div>
-        <div style={{ textAlign: 'right', flexShrink: 0 }}>
-          <div style={{ fontFamily: "'Syne',sans-serif", fontSize: '32px', fontWeight: 800, color: 'var(--acc)' }}>
-            {analytics.profileScore}%
-          </div>
-          <div style={{ fontSize: '10px', color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '.8px' }}>
-            profile score
-          </div>
-        </div>
-      </div>
-
+        <Toast toast={toast} />    
       <div className="content-grid">
         {/* Profile header */}
         <div style={{
